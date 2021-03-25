@@ -18,6 +18,7 @@ app.get("/", function (req, res) {
   // res.sendFile('dist/index.html')
   res.sendFile(path.resolve("src/client/views/index.html"));
 });
+
 // INFO: a route that handling post request for new URL that coming from the frontend
 app.post("/analysis", async (req, res) => {
   const url = req.body.url;
@@ -48,4 +49,4 @@ app.listen(PORT, (error) => {
   console.log(`Server listening on port ${PORT}!`);
 });
 
-// TODO: export app to use it in the unit testing
+module.exports = app
