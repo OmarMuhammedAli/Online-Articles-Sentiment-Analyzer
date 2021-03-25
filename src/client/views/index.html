@@ -4,43 +4,67 @@
     <meta charset="utf-8" />
     <title>Sentiment Analyzer</title>
   </head>
-
   <body>
     <main>
-      <div class="container">
+      <div class="container mt-3">
         <p>Enter a URL of an article / a blog to discover its sentiment.</p>
         <section>
           <form id="form">
-            <label for="article-url">URL</label>
-            <input id="article-url" type="text" name="input" value="" placeholder="Enter Article URL here" />
-            <button
-              type="submit"
-              class="btn-submit"
-            >
-              Submit
-            </button>
+            <div class="form-group row">
+              <label for="article-url" class="col-sm-2 col-form-label"
+                >URL</label
+              >
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="article-url"
+                  placeholder="Enter Article URL here"
+                  name="input"
+                  value=""
+                />
+                <br />
+                <button type="submit" class="btn btn-outline-primary">
+                  Analyze
+                </button>
+              </div>
+            </div>
           </form>
         </section>
-
         <section>
           <strong>Form Results:</strong>
-          <div id="text"></div>
-          <div id="agreement"></div>
-          <div id="subjectivity"></div>
-          <div id="confidence"></div>
-          <div id="irony"></div>
-          <div id="score_tag"></div>
+
+          <ul class="list-group list-group-flush col-sm-6">
+            <li class="list-group-item">
+              <div>Text: <span id="text"></span></div>
+            </li>
+            <li class="list-group-item">
+              <div>Agreement: <span id="agreement"></span></div>
+            </li>
+            <li class="list-group-item">
+              <div>Subjectivity: <span id="subjectivity"></span></div>
+            </li>
+            <li class="list-group-item">
+              <div>Confidence: <span id="confidence"></span></div>
+            </li>
+            <li class="list-group-item">
+              <div>Irony: <span id="irony"></span></div>
+            </li>
+            <li class="list-group-item">
+              <div>Score Tag: <span id="score_tag"></span></div>
+            </li>
+          </ul>
         </section>
       </div>
     </main>
-    <script>
+    <!-- <script>
       // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
+      if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-        })
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
       }
-    </script>
+    </script> -->
   </body>
 </html>
