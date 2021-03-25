@@ -13,7 +13,7 @@
   "description": "Sentiment Anlayzer for Online Articles",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OmarMuhammedAli/udacity-projects-starter-kit.git"
+    "url": "https://github.com/OmarMuhammedAli/Online-Articles-Sentiment-Analyzer.git"
   },
   "dependencies": {
     "axios": "^0.21.1",
