@@ -1,15 +1,15 @@
-// TODO: import the url check function
+import { checkURL } from '../js/checkURL'
 
 describe('Test check url functionality', () => {
-    test('Testing the checkUrl function defined or not', () => {
-        // TODO: write your logic here
+    test('Testing to see whether checkURL function is defined or not', () => {
+        expect(checkURL).toBeDefined()
     })
 
-    test('Testing the checkUrl function return false for invalid url', () => {
-        // TODO: write your logic here
+    test('Testing invalid URL output', () => {
+        expect(checkURL('Invalid URL')).toBeFalsy()
     })
 
-    test('Testing the checkUrl function return true for valid url', () => {
-        // TODO: write your logic here
+    test('Testing valid URL output', () => {
+        expect(checkURL('https://jestjs.io/docs/getting-started')).toBeTruthy()
     })
 })
