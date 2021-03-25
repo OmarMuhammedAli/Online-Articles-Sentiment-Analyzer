@@ -12,11 +12,10 @@ app.use(cors());
 app.use(express.json());
 // TODO: Configure express static directory.
 // Change to dist
-app.use(express.static("src/client"));
+app.use(express.static("dist"));
 
 app.get("/", function (req, res) {
-  // res.sendFile('dist/index.html')
-  res.sendFile(path.resolve("src/client/views/index.html"));
+  res.sendFile('dist/index.html')
 });
 
 // INFO: a route that handling post request for new URL that coming from the frontend
@@ -39,9 +38,9 @@ app.post("/analysis", async (req, res) => {
   }
 });
 
-// app.get('/test', function (req, res) {
-//     res.send(mockAPIResponse)
-// })
+app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
+})
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, (error) => {
