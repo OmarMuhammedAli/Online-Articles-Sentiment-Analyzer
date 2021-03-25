@@ -6,6 +6,9 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'minimal',
+    devServer: {
+        port: 8080
+    },
     module: {
         rules: [
             {
