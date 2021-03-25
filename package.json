@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon src/server/index.js",
-    "build-prod": "webpack --config webpack.prod.js",
+    "build-prod": "rm -rf dist && webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js"
   },
   "keywords": [],
