@@ -20,15 +20,6 @@ const post = async (endpoint = "", data = {}) => {
 };
 
 export const handleSubmit = async () => {
-  /**
-   * TODO
-   *  - Get Value of the input for URL
-   *  - Check if it's URL or not
-   *      yes
-   *          send it to the backend
-   *      no
-   *          show user message it's not valid URL
-   */
   const url = document.getElementById("article-url").value;
   if (checkURL(url)) {
     // TODO: call the backend with the URL
