@@ -5,8 +5,9 @@ This project aims to build a web tool that allows users to run Natural Language 
 This project is the final project for course 4 in FEND ND powered by [Udacity](https://www.udacity.com/).
 
 ## Build Tools
-* HTML
-* CSS
+* HTML5
+* CSS3
+*Sass
 * JavaScript
 * Node
 * Express
